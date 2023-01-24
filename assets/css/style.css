@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+body {
+  color: #333;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+.button-1 {
+  width: 120px;
+  border-radius: 100px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 100px;
+  margin-right: 5px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+
+
+.owl-carousel {
+  min-width: 100%;
+}
+
+.owl-dot {
+  border: 2px solid #bc9045 !important;
+  border-radius: 100%;
+  opacity: 0.3;
+  /* height: 10px; */
+  margin-top: -20px;
+}
+
+.owl-dot.active {
+  border: 2px solid #e42626 !important;
+  opacity: 1;
+}
+
+.owl-dot span {
+  background: #bc9045 !important;
+  height: 5px;
+  width: 5px;
+  display: block;
+  border-radius: 100%;
+  margin: 5px;
+}
+
+.owl-dot.active span {
+  background: #e42626 !important;
+}
+
+
+.owl-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -15px;
+  grid-gap: 10px;
+}
+
+
+.menu-active {
+  display: none;
+}
+
+.game-button.active img {
+  display: none;
+}
+
+.game-button.active img.menu-active {
+  display: block;
+}
+
+.mobile-navigation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  font-size: 12px;
+  font-weight: 300;
+  text-align: center;
+  border: 1px solid #eee;
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
+  border-bottom: none;
+  color: #888;
+}
+
+.main-child {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  left: 50%;
+  top: 35%;
+  height: 80px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #eee;
+  background: #fff;
+}
+
+.main-child .wrapper {
+  color: #fff;
+  background: linear-gradient(to bottom, rgba(237, 80, 121, 1) 0%, rgba(180, 30, 81, 1) 100%);
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar {
+  height: 100vh;
+  width: 230px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  background: #fff;
+  overflow-y: scroll;
+  padding-bottom: 20px;
+}
+
+.overlay {
+  z-index: 40;
+}

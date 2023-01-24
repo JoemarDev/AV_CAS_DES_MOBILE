@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>AVEN CASINO</title>
+
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link rel="stylesheet" href="./assets/css/style.css">
+	<script src="./assets/js/tailwind.js"></script>
+	<script src="./assets/js/jquery-3.1.0.js"></script>
+
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+</head>
+
+<body style="max-height: 100vh; overflow : hidden">
+	<div class="ref-height">
+		<!-- Navigation Section -->
+		<div class="navigation grid grid-cols-6 items-center p-2 w-full border-b">
+			<div class="sidebar-button col-span-2" onclick="OpenSideBar()">
+				<img class="w-6" src="./assets/images/icons/sidebar.png" alt="">
+			</div>
+			<a href="index.html" class="block brand col-span-2">
+				<img class="h-10 mx-auto" src="./assets/images/brand/logo.png" alt="">
+			</a>
+			<div class="account-details col-span-2">
+				<div class="flex justify-end w-full text-xs gap-4 font-semibold">
+					<a href="page-register.html" class="block">회원가입</a>
+					<div onclick="OpenLoginForm()">로그인</div>
+				</div>
+			</div>
+		</div>
+		<!-- Navigation Section -->
+
+		<!-- Carousel Section -->
+		<div class="home-carousel p-2">
+			<!-- Carousel Section -->
+			<div class="owl-carousel owl-theme">
+				<div class="item">
+					<img src="./assets/images/carousel/1.png" alt="">
+				</div>
+				<div class="item">
+					<img src="./assets/images/carousel/2.png" alt="">
+				</div>
+				<div class="item">
+					<img src="./assets/images/carousel/3.png" alt="">
+				</div>
+				<div class="item">
+					<img src="./assets/images/carousel/4.png" alt="">
+				</div>
+				<div class="item">
+					<img src="./assets/images/carousel/5.png" alt="">
+				</div>
+			</div>
+			<!-- Carousel Section -->
+		</div>
+		<!-- Carousel Section -->
+
+		<!-- Marquee Section -->
+		<div class="marquee-details grid grid-cols-9 items-center my-1">
+			<div class="col-span-1">
+				<img class="mx-auto" src="./assets/images/icons/marquee.png" alt="">
+			</div>
+			<div class="col-span-8">
+				<marquee direction="left" class="font-base text-xs">
+					※ 입금 전 계좌문의 필수!!! ※ 즐거운 하루 보내시기 바랍니다.^^&nbsp;&nbsp;&nbsp;
+				</marquee>
+			</div>
+
+		</div>
+		<!-- Marquee Section -->
+	</div>
+
+	<!-- Body Spacing -->
+	<div class="p-2">
+
+		<!-- Content Section -->
+		<div class="content-container grid grid-cols-7 gap-2 relative">
+
+			<!-- Content Menu Section -->
+			<div class="tab-container col-span-1 flex-col flex gap-2  overflow-y-scroll">
+				<a class="game-button casino-tab active" onclick="ScrollToCasino()">
+					<img src="./assets/images/menu/1.png" alt="">
+					<img class="menu-active" src="./assets/images/menu-active/1.png" alt="">
+				</a>
+				<div class="game-button slot-tab" onclick="ScrollToSlot()">
+					<img src="./assets/images/menu/2.png" alt="">
+					<img class="menu-active" src="./assets/images/menu-active/2.png" alt="">
+				</div>
+				<div class="game-button sport-tab" onclick="ScrollToSports()">
+					<img src="./assets/images/menu/3.png" alt="">
+					<img class="menu-active" src="./assets/images/menu-active/3.png" alt="">
+				</div>
+				<div class="game-button mini-tab" onclick="ScrollToMiniGame()">
+					<img src="./assets/images/menu/4.png" alt="">
+					<img class="menu-active" src="./assets/images/menu-active/4.png" alt="">
+				</div>
+				<div class="game-button virtual-tab" onclick="ScrollToVirtual()">
+					<img src="./assets/images/menu/5.png" alt="">
+					<img class="menu-active" src="./assets/images/menu-active/5.png" alt="">
+				</div>
+			</div>
+			<!-- Content Menu Section -->
+
+			<!-- Content Game Lists Section -->
+			<div class="list-container col-span-6  overflow-y-scroll ">
+
+				<!-- Live Game Section -->
+				<div id="live-list">
+					<div class=" game-image mb-2">
+						<img class="w-full" src="./assets/images/casino/1.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/casino/2.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/casino/3.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/casino/4.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/casino/5.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/casino/6.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/casino/7.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/casino/8.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/casino/9.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/casino/10.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/casino/11.png" alt="">
+					</div>
+				</div>
+				<!-- Live Game Section -->
+
+				<!-- Slot Game Lists Section -->
+				<div id="slot-list">
+					<div class=" game-image mb-2">
+						<img class="w-full" src="./assets/images/slot/1.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/slot/2.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/slot/3.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/slot/4.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/slot/5.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/slot/6.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/slot/7.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/slot/8.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/slot/9.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/slot/10.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/slot/11.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/slot/12.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/slot/13.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/slot/14.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/slot/15.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/slot/16.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/slot/17.png" alt="">
+					</div>
+				</div>
+				<!-- Slot Game Lists Section -->
+
+				<!-- Sport Game Lists Section -->
+				<div id="sport-list">
+					<div class=" game-image mb-2">
+						<img class="w-full" src="./assets/images/sports/1.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/sports/2.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/sports/3.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/sports/4.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/sports/5.png" alt="">
+					</div>
+				</div>
+				<!-- Sport Game Lists Section -->
+
+				<!-- Mini Game Lists Section -->
+				<div id="minigame-list">
+					<div class=" game-image mb-2">
+						<img class="w-full" src="./assets/images/minigame/1.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/minigame/2.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/minigame/3.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/minigame/4.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/minigame/5.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/minigame/6.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/minigame/7.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/minigame/8.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/minigame/9.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/minigame/10.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/minigame/11.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/minigame/12.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/minigame/13.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/minigame/14.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/minigame/15.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/minigame/16.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/minigame/17.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/minigame/18.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/minigame/19.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/minigame/20.png" alt="">
+					</div>
+				</div>
+				<!-- Mini Game Lists Section -->
+
+				<!-- Virtual Game Lists Section -->
+				<div id="virtuals-list">
+					<div class=" game-image mb-2">
+						<img class="w-full" src="./assets/images/virtual/1.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/virtual/2.png" alt="">
+					</div>
+					<div class="game-image mb-2">
+						<img class="w-full" src="./assets/images/virtual/3.png" alt="">
+					</div>
+				</div>
+				<!-- Virtual Game Lists Section -->
+			</div>
+			<!-- Content Game Lists Section -->
+		</div>
+		<!-- Content Section -->
+	</div>
+	<!-- Body Spacing -->
+
+	<!-- Mobile Navigation Section -->
+	<div class="mobile-navigation shadow-xl">
+		<div class="grid grid-cols-5 py-2 ">
+			<div class="nav-child">
+				<img class="w-8 mx-auto" src="./assets/images/mobile-navigation/1.png" alt="">
+				<p>입금</p>
+			</div>
+			<div class="nav-child">
+				<img class="w-8 mx-auto" src="./assets/images/mobile-navigation/2.png" alt="">
+				<p>출금</p>
+			</div>
+			<div class="nav-child relative">
+				<div class="main-child">
+					<div class="wrapper">
+						<div>
+							<img class="w-8 mx-auto" src="./assets/images/mobile-navigation/3.png" alt="">
+							<p>홈</p>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+			<div class="nav-child">
+				<img class="w-8 mx-auto" src="./assets/images/mobile-navigation/4.png" alt="">
+				<p>이벤트</p>
+			</div>
+			<div class="nav-child">
+				<img class="w-8 mx-auto" src="./assets/images/mobile-navigation/5.png" alt="">
+				<p>고객센터</p>
+			</div>
+		</div>
+	</div>
+	<!-- Mobile Navigation Section -->
+
+	<!-- Sidebar Section -->
+	<div class="sidebar shadow-xl  hidden">
+		<div class="flex justify-between items-center sticky top-0 bg-white shadow-lg p-2">
+			<img class="h-8" src="./assets/images/brand/logo.png" alt="">
+			<button onclick="CloseSideBar()" class="close-button py-2"><img src="./assets/images/icons/close.svg"
+					alt=""></button>
+		</div>
+		<div class="p-2">
+			<a class="p-2 grid grid-cols-8 gap-2 border mb-2 block" href="page-casino.html">
+				<div class="col-span-2"><img class="mx-auto w-6" src="./assets/images/sidebar/1.png" alt=""></div>
+				<div class="col-span-6">라이브카지노</div>
+			</a>
+			<a class="p-2 grid grid-cols-8 gap-2 border mb-2 block" href="page-slot.html">
+				<div class="col-span-2"><img class="mx-auto w-6" src="./assets/images/sidebar/2.png" alt=""></div>
+				<div class="col-span-6">슬롯게임</div>
+			</a>
+			<div class="p-2 grid grid-cols-8 gap-2 border mb-2" onclick="OpenLoginForm()">
+				<div class="col-span-2"><img class="mx-auto w-6" src="./assets/images/sidebar/3.png" alt=""></div>
+				<div class="col-span-6">스포츠</div>
+			</div>
+			<a class="p-2 grid grid-cols-8 gap-2 border mb-2 block" href="page-minigame.html">
+				<div class="col-span-2"><img class="mx-auto w-6" src="./assets/images/sidebar/4.png" alt=""></div>
+				<div class="col-span-6">미니게임</div>
+			</a>
+			<a class="p-2 grid grid-cols-8 gap-2 border mb-2 block" href="page-virtual-game.html">
+				<div class="col-span-2"><img class="mx-auto w-6" src="./assets/images/sidebar/5.png" alt=""></div>
+				<div class="col-span-6">가상게임</div>
+			</a>
+			<a class="p-2 grid grid-cols-8 gap-2 border mb-2 block" href="page-event.html">
+				<div class="col-span-2"><img class="mx-auto w-6" src="./assets/images/sidebar/6.png" alt=""></div>
+				<div class="col-span-6">이벤트</div>
+			</a>
+			<a class="p-2 grid grid-cols-8 gap-2 border mb-2 block" href="page-notice.html">
+				<div class="col-span-2"><img class="mx-auto w-6" src="./assets/images/sidebar/7.png" alt=""></div>
+				<div class="col-span-6">공지사항</div>
+			</a>
+			<div class="p-2 grid grid-cols-8 gap-2 border mb-2" onclick="OpenLoginForm()">
+				<div class="col-span-2"><img class="mx-auto w-6" src="./assets/images/sidebar/8.png" alt=""></div>
+				<div class="col-span-6">쪽지( )</div>
+			</div>
+			<div class="p-2 grid grid-cols-8 gap-2 border mb-2" onclick="OpenLoginForm()">
+				<div class="col-span-2"><img class="mx-auto w-6" src="./assets/images/sidebar/9.png" alt=""></div>
+				<div class="col-span-6">마이페이지</div>
+			</div>
+			<div class="p-2 grid grid-cols-8 gap-2 border mb-2" onclick="OpenLoginForm()">
+				<div class="col-span-2"><img class="mx-auto w-6" src="./assets/images/sidebar/10.png" alt=""></div>
+				<div class="col-span-6">추천내역</div>
+			</div>
+			<div class="p-2 grid grid-cols-8 gap-2 border mb-2" onclick="OpenLoginForm()">
+				<div class="col-span-2"><img class="mx-auto w-6" src="./assets/images/sidebar/11.png" alt=""></div>
+				<div class="col-span-6">출석하기</div>
+			</div>
+			<div class="p-2 grid grid-cols-8 gap-2 border mb-2" onclick="OpenLoginForm()">
+				<div class="col-span-2"><img class="mx-auto w-6" src="./assets/images/sidebar/12.png" alt=""></div>
+				<div class="col-span-6">입금</div>
+			</div>
+			<div class="p-2 grid grid-cols-8 gap-2 border mb-2" onclick="OpenLoginForm()">
+				<div class="col-span-2"><img class="mx-auto w-6" src="./assets/images/sidebar/13.png" alt=""></div>
+				<div class="col-span-6">출금</div>
+			</div>
+			<div class="p-2 grid grid-cols-8 gap-2 border mb-2" onclick="OpenLoginForm()">
+				<div class="col-span-2"><img class="mx-auto w-6" src="./assets/images/sidebar/14.png" alt=""></div>
+				<div class="col-span-6">배팅내역</div>
+			</div>
+			<div class="p-2 grid grid-cols-8 gap-2 border mb-2" onclick="OpenLoginForm()">
+				<div class="col-span-2"><img class="mx-auto w-6" src="./assets/images/sidebar/15.png" alt=""></div>
+				<div class="col-span-6">경기결과</div>
+			</div>
+			<div class="p-2 grid grid-cols-8 gap-2 border mb-2" onclick="OpenLoginForm()">
+				<div class="col-span-2"><img class="mx-auto w-6" src="./assets/images/sidebar/16.png" alt=""></div>
+				<div class="col-span-6">베팅규정</div>
+			</div>
+			<div class="p-2 grid grid-cols-8 gap-2 border mb-2" onclick="OpenLoginForm()">
+				<div class="col-span-2"><img class="mx-auto w-6" src="./assets/images/sidebar/17.png" alt=""></div>
+				<div class="col-span-6">고객센터</div>
+			</div>
+		</div>
+	</div>
+	<!-- Sidebar Section -->
+
+	<div class="LOGIN_WRAPPER hidden">
+		<div class="w-full h-screen bg-black/80 fixed left-0 top-0 z-40 flex items-center justify-center">
+			<div class="form  bg-white rounded-lg relative"
+				style="width: 95%; max-width : 400px; height : 458px; background : url('./assets/images/form/bg-frm.png'); background-color : #fff">
+				<div class="relative flex items-center justify-center p-5 px-10 h-full">
+					<img onclick="CloseLoginForm()"
+						class="absolute right-5 top-5 border-2 rounded-full border-black cursor-pointer z-20"
+						src="./assets/images/icons/close.svg" alt="">
+					<div class="text-center">
+						<img class="mb-2 mx-auto" src="./assets/images/brand/logo.png" alt="">
+						<h2 class="text-xl font-bold">로그인</h2>
+						<hr class="border my-2">
+						<input class="border w-full mb-2 py-2 px-4 text-center bg-white rounded-lg" type="text"
+							placeholder="아이디">
+						<input autocomplete="new-password"
+							class="border w-full mb-2 py-2 px-4 text-center bg-white rounded-lg" type="password"
+							placeholder="아이디">
+
+						<button class="button-1 w-full mb-2 bg-theme-3">로그인</button>
+						<a href="page-register.html" class="block button-1 w-full bg-theme-4">회원가입</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+	<!-- Modal Overlay -->
+	<div class="overlay w-full h-screen bg-theme-2/50 left-0 top-0 fixed hidden"></div>
+	<!-- Modal Overlay -->
+
+</body>
+
+<script src="./assets/js/script.js"></script>
+
+</html>
