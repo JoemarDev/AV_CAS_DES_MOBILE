@@ -126,7 +126,7 @@ body {
   z-index: 50;
   background: #fff;
   overflow-y: scroll;
-  padding-bottom: 50px;
+  padding-bottom: 30vh;
 }
 
 .overlay {
