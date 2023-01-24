@@ -138,6 +138,10 @@ const OpenLoginForm = () => {
 	CloseSideBar();
 }
 
+
+$('.nav-child').click(() => {
+	OpenLoginForm();
+})
 const CloseLoginForm = () => $('.LOGIN_WRAPPER').hide();
 
 
