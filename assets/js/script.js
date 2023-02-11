@@ -1,8 +1,28 @@
+let isLogin = false;
+
+const Init = () => {
+	if (isLogin) {
+		$('.member_box').show()
+		$('.guess_box').hide();
+	} else {
+		$('.member_box').hide()
+		$('.guess_box').show();
+	}
+}
+
+
 $(document).ready(() => {
 	InitCarousel();
 	GetGeneratedHeight();
+	Init();
 });
 
+
+$('.login-button').click(() => {
+	isLogin = true;
+	CloseLoginForm()
+	Init();
+})
 
 
 const GetGeneratedHeight = () => {
@@ -139,9 +159,9 @@ const OpenLoginForm = () => {
 }
 
 
-$('.nav-child').click(() => {
-	OpenLoginForm();
-})
+// $('.nav-child').click(() => {
+// 	OpenLoginForm();
+// })
 const CloseLoginForm = () => $('.LOGIN_WRAPPER').hide();
 
 

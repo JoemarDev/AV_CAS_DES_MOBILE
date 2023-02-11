@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVEN CASINO | EVENT</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/tailwind.js"></script>
+    <script src="./assets/js/jquery-3.1.0.js"></script>
+
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+
+    <style type="text/css">
+        .attend-top {
+            padding: 10px;
+
+
+            text-align: center;
+        }
+
+        .attend-top button {
+            margin: 0 10px;
+        }
+
+        #nowMonth {
+            font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
+            font-size: 40px;
+            color: #ff0000;
+        }
+
+        #t_calendar {
+            background: #fff;
+            padding: 10px;
+            border: solid 1px #ccc;
+            border-radius: 0 0 5px 5px;
+        }
+
+        #t_calendar th {
+            height: 40px;
+            line-height: 40px;
+            text-shadow: 0 0 1px #000;
+            color: #fff;
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+            border-top: solid 1px rgba(255, 255, 255, 0.20);
+            border-right: solid 1px rgba(0, 0, 0, 0.55);
+            border-left: solid 1px rgba(255, 255, 255, 0.16);
+            border-bottom: solid 1px #000;
+            background: #363942;
+        }
+
+        #t_calendar td {
+            height: 80px;
+            text-align: center;
+            position: relative;
+            border: 1px solid #ccc !important;
+            border-collapse: collapse;
+        }
+
+        #t_calendar td span {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+        }
+
+        .att_on {
+            background: url('/html/wcking_mobile/images/icon-attend-o.png?1') no-repeat center center !important;
+            background-size: 90% !important;
+        }
+
+        .att_off {
+            background: url('./assets/images/icons/icon-attend-x.png') no-repeat center center !important;
+            background-size: 90% !important;
+        }
+
+        .att_enable:hover {
+            background: url('/html/wcking_mobile/images/icon-attend-o.png?1') no-repeat center center !important;
+            background-size: 90% !important;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="ref-height sticky top-0 bg-white">
+        <!-- Navigation Section -->
+        <div class="navigation grid grid-cols-6 items-center p-2 w-full border-b">
+            <div class="sidebar-button col-span-2" onclick="OpenSideBar()">
+                <img class="w-6" src="./assets/images/icons/sidebar.png" alt="">
+            </div>
+            <a href="index.html" class="block brand col-span-2">
+                <img class="h-10 mx-auto" src="./assets/images/brand/logo.png" alt="">
+            </a>
+            <div class="account-details col-span-2">
+                <div class="flex justify-end w-full text-xs gap-4 font-semibold">
+                    <a href="page-register.html" class="block">회원가입</a>
+                    <div onclick="OpenLoginForm()">로그인</div>
+                </div>
+            </div>
+        </div>
+        <!-- Navigation Section -->
+
+    </div>
+
+    <!-- Body Spacing -->
+    <div class="p-2 pb-20">
+
+        <div class="p-2 border-b">
+            <h2 class="font-bold">출석하기 <span class="text-black/50">Attendance</span></h2>
+        </div>
+        <div class="flex gap-2 my-2">
+            <button class="w-full bg-theme-1 py-2 px-4 rounded border rounded bg-theme-2/5">출석부</button>
+            <button class="w-full bg-theme-1 py-2 px-4 rounded border rounded bg-theme-2/5">룰렛게임</button>
+            <button class="w-full bg-theme-1 py-2 px-4 rounded border rounded bg-theme-2/5">복권긁기</button>
+        </div>
+        <div class="attend-top">
+            <button type="button" id="beforeMonth" data-value="2023-01"><i class="fa fa-angle-double-left"
+                    aria-hidden="true"></i> 이전달</button>
+            <span id="nowMonth">2023-02</span>
+            <button type="button" id="nextMonth" data-value="2023-03">다음달 <i class="fa fa-angle-double-right"
+                    aria-hidden="true"></i></button>
+        </div>
+        <table class="mb-12" width="100%" height="" border="0" cellpadding="0" cellspacing="0" id="t_calendar">
+            <tbody>
+                <tr>
+                    <th width="15%" align="center" class="td_title_bg b">
+                        <font color="red">일</font>
+                    </th>
+                    <th width="14%" align="center" class="td_title_bg b">월</th>
+                    <th width="14%" align="center" class="td_title_bg b">화</th>
+                    <th width="14%" align="center" class="td_title_bg b">수</th>
+                    <th width="14%" align="center" class="td_title_bg b">목</th>
+                    <th width="14%" align="center" class="td_title_bg b">금</th>
+                    <th width="15%" align="center" class="td_title_bg b">
+                        <font color="#006699">토</font>
+                    </th>
+                </tr>
+            </tbody>
+            <tbody id="lists">
+                <tr>
+                    <td class="_right">&nbsp;</td>
+                    <td class="_right">&nbsp;</td>
+                    <td class="_right">&nbsp;</td>
+                    <td class="at att_off att_disabled" data-date="2023-02-01" align="right" bgcolor="" style=""> <span>
+                            1</span></td>
+                    <td class="at att_off att_disabled" data-date="2023-02-02" align="right" bgcolor="" style=""> <span>
+                            2</span></td>
+                    <td class="at att_off att_disabled" data-date="2023-02-03" align="right" bgcolor="" style=""> <span>
+                            3</span></td>
+                    <td class="at att_off att_disabled" data-date="2023-02-04" align="right" bgcolor="" style=""> <span>
+                            4</span></td>
+                </tr>
+                <tr>
+                    <td class="at att_off att_disabled" data-date="2023-02-05" align="right" bgcolor="" style=""> <span>
+                            5</span></td>
+                    <td class="at att_off att_disabled" data-date="2023-02-06" align="right" bgcolor="" style=""> <span>
+                            6</span></td>
+                    <td class="at att_off att_disabled" data-date="2023-02-07" align="right" bgcolor="" style=""> <span>
+                            7</span></td>
+                    <td class="at att_off att_enable" data-date="2023-02-08" align="right" bgcolor=""
+                        style="cursor: pointer;">
+                        <span> 8</span>
+                        <p>코인<br><strong>2</strong> 개</p>
+                    </td>
+                    <td class="at att_give att_disabled" data-date="2023-02-09" align="right" bgcolor="" style="">
+                        <span>
+                            9</span>
+                        <p>코인<br><strong>2</strong> 개</p>
+                    </td>
+                    <td class="at att_give att_disabled" data-date="2023-02-10" align="right" bgcolor="" style="">
+                        <span>
+                            10</span>
+                        <p>코인<br><strong>2</strong> 개</p>
+                    </td>
+                    <td class="at att_give att_disabled" data-date="2023-02-11" align="right" bgcolor="" style="">
+                        <span>
+                            11</span>
+                        <p>코인<br><strong>2</strong> 개</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="at att_give att_disabled" data-date="2023-02-12" align="right" bgcolor="" style="">
+                        <span>
+                            12</span>
+                        <p>코인<br><strong>2</strong> 개</p>
+                    </td>
+                    <td class="at att_give att_disabled" data-date="2023-02-13" align="right" bgcolor="" style="">
+                        <span>
+                            13</span>
+                        <p>코인<br><strong>2</strong> 개</p>
+                    </td>
+                    <td class="at att_give att_disabled" data-date="2023-02-14" align="right" bgcolor="" style="">
+                        <span>
+                            14</span>
+                        <p>코인<br><strong>2</strong> 개</p>
+                    </td>
+                    <td class="at att_give att_disabled" data-date="2023-02-15" align="right" bgcolor="" style="">
+                        <span>
+                            15</span>
+                        <p>코인<br><strong>2</strong> 개</p>
+                    </td>
+                    <td class="at att_give att_disabled" data-date="2023-02-16" align="right" bgcolor="" style="">
+                        <span>
+                            16</span>
+                        <p>코인<br><strong>2</strong> 개</p>
+                    </td>
+                    <td class="at att_give att_disabled" data-date="2023-02-17" align="right" bgcolor="" style="">
+                        <span>
+                            17</span>
+                        <p>코인<br><strong>2</strong> 개</p>
+                    </td>
+                    <td class="at att_give att_disabled" data-date="2023-02-18" align="right" bgcolor="" style="">
+                        <span>
+                            18</span>
+                        <p>코인<br><strong>2</strong> 개</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="at att_give att_disabled" data-date="2023-02-19" align="right" bgcolor="" style="">
+                        <span>
+                            19</span>
+                        <p>코인<br><strong>2</strong> 개</p>
+                    </td>
+                    <td class="at att_give att_disabled" data-date="2023-02-20" align="right" bgcolor="" style="">
+                        <span>
+                            20</span>
+                        <p>코인<br><strong>2</strong> 개</p>
+                    </td>
+                    <td class="at att_give att_disabled" data-date="2023-02-21" align="right" bgcolor="" style="">
+                        <span>
+                            21</span>
+                        <p>코인<br><strong>2</strong> 개</p>
+                    </td>
+                    <td class="at att_give att_disabled" data-date="2023-02-22" align="right" bgcolor="" style="">
+                        <span>
+                            22</span>
+                        <p>코인<br><strong>2</strong> 개</p>
+                    </td>
+                    <td class="at att_give att_disabled" data-date="2023-02-23" align="right" bgcolor="" style="">
+                        <span>
+                            23</span>
+                        <p>코인<br><strong>2</strong> 개</p>
+                    </td>
+                    <td class="at att_give att_disabled" data-date="2023-02-24" align="right" bgcolor="" style="">
+                        <span>
+                            24</span>
+                        <p>코인<br><strong>2</strong> 개</p>
+                    </td>
+                    <td class="at att_give att_disabled" data-date="2023-02-25" align="right" bgcolor="" style="">
+                        <span>
+                            25</span>
+                        <p>코인<br><strong>2</strong> 개</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="at att_give att_disabled" data-date="2023-02-26" align="right" bgcolor="" style="">
+                        <span>
+                            26</span>
+                        <p>코인<br><strong>2</strong> 개</p>
+                    </td>
+                    <td class="at att_give att_disabled" data-date="2023-02-27" align="right" bgcolor="" style="">
+                        <span>
+                            27</span>
+                        <p>코인<br><strong>2</strong> 개</p>
+                    </td>
+                    <td class="at att_give att_disabled" data-date="2023-02-28" align="right" bgcolor="" style="">
+                        <span>
+                            28</span>
+                        <p>코인<br><strong>2</strong> 개</p>
+                    </td>
+                    <td class="_top _right">&nbsp;</td>
+                    <td class="_top _right">&nbsp;</td>
+                    <td class="_top _right">&nbsp;</td>
+                    <td class="_top _right">&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+    <!-- Body Spacing -->
+    <!-- Mobile Navigation Section -->
+    <div class="mobile-navigation shadow-xl">
+        <div class="grid grid-cols-5 py-2 ">
+            <a class="nav-child" href="page-deposit.html">
+                <img class="w-8 mx-auto" src="./assets/images/mobile-navigation/1.png" alt="">
+                <p>입금</p>
+            </a>
+            <a class="nav-child" href="page-withdraw.html">
+                <img class="w-8 mx-auto" src="./assets/images/mobile-navigation/2.png" alt="">
+                <p>출금</p>
+            </a>
+            <a class="nav-child relative" href="index.html">
+                <div class="main-child">
+                    <div class="wrapper">
+                        <div>
+                            <img class="w-8 mx-auto" src="./assets/images/mobile-navigation/3.png" alt="">
+                            <p>홈</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a class="nav-child" href="page-event.html">
+                <img class="w-8 mx-auto" src="./assets/images/mobile-navigation/4.png" alt="">
+                <p>이벤트</p>
+            </a>
+            <a class="nav-child" href="page-customer.html">
+                <img class="w-8 mx-auto" src="./assets/images/mobile-navigation/5.png" alt="">
+                <p>고객센터</p>
+            </a>
+        </div>
+    </div>
+    <!-- Mobile Navigation Section -->
+
+    <!-- Sidebar Section -->
+    <div class="sidebar shadow-xl  hidden">
+        <div class="flex justify-between items-center sticky top-0 bg-white shadow-lg p-2">
+            <img class="h-8" src="./assets/images/brand/logo.png" alt="">
+            <button onclick="CloseSideBar()" class="close-button py-2"><img src="./assets/images/icons/close.svg"
+                    alt=""></button>
+        </div>
+        <div class="p-2">
+            <a class="p-2 grid grid-cols-8 gap-2 border mb-2 block" href="#">
+                <div class="col-span-2"><img class="mx-auto w-6" src="./assets/images/icons/coin.svg" alt=""></div>
+                <div class="col-span-6">[전환]</div>
+            </a>
+            <a class="p-2 grid grid-cols-8 gap-2 border mb-2 block" href="page-account.html">
+                <div class="col-span-2"><img class="mx-auto w-6" src="./assets/images/icons/level.png" alt=""></div>
+                <div class="col-span-6">훌럭이 님</div>
+            </a>
+            <a class="p-2 grid grid-cols-8 gap-2 border mb-2 block" href="page-casino.html">
+                <div class="col-span-2"><img class="mx-auto w-6" src="./assets/images/sidebar/1.png" alt=""></div>
+                <div class="col-span-6">라이브카지노</div>
+            </a>
+            <a class="p-2 grid grid-cols-8 gap-2 border mb-2 block" href="page-slot.html">
+                <div class="col-span-2"><img class="mx-auto w-6" src="./assets/images/sidebar/2.png" alt=""></div>
+                <div class="col-span-6">슬롯게임</div>
+            </a>
+            <a class="p-2 grid grid-cols-8 gap-2 border mb-2 block" href="page-game-lists.html">
+                <div class="col-span-2"><img class="mx-auto w-6" src="./assets/images/sidebar/3.png" alt=""></div>
+                <div class="col-span-6">스포츠</div>
+            </a>
+            <a class="p-2 grid grid-cols-8 gap-2 border mb-2 block" href="page-minigame.html">
+                <div class="col-span-2"><img class="mx-auto w-6" src="./assets/images/sidebar/4.png" alt=""></div>
+                <div class="col-span-6">미니게임</div>
+            </a>
+            <a class="p-2 grid grid-cols-8 gap-2 border mb-2 block" href="page-virtual-game.html">
+                <div class="col-span-2"><img class="mx-auto w-6" src="./assets/images/sidebar/5.png" alt=""></div>
+                <div class="col-span-6">가상게임</div>
+            </a>
+            <a class="p-2 grid grid-cols-8 gap-2 border mb-2 block" href="page-event.html">
+                <div class="col-span-2"><img class="mx-auto w-6" src="./assets/images/sidebar/6.png" alt=""></div>
+                <div class="col-span-6">이벤트</div>
+            </a>
+            <a class="p-2 grid grid-cols-8 gap-2 border mb-2 block" href="page-notice.html">
+                <div class="col-span-2"><img class="mx-auto w-6" src="./assets/images/sidebar/7.png" alt=""></div>
+                <div class="col-span-6">공지사항</div>
+            </a>
+            <a class="p-2 grid grid-cols-8 gap-2 border mb-2 block" href="page-memo.html">
+                <div class="col-span-2"><img class="mx-auto w-6" src="./assets/images/sidebar/8.png" alt=""></div>
+                <div class="col-span-6">쪽지( )</div>
+            </a>
+            <a class="p-2 grid grid-cols-8 gap-2 border mb-2 block" href="page-account.html">
+                <div class="col-span-2"><img class="mx-auto w-6" src="./assets/images/sidebar/9.png" alt=""></div>
+                <div class="col-span-6">마이페이지</div>
+            </a>
+            <a class="p-2 grid grid-cols-8 gap-2 border mb-2 block" href="page-recommender.html">
+                <div class="col-span-2"><img class="mx-auto w-6" src="./assets/images/sidebar/10.png" alt=""></div>
+                <div class="col-span-6">추천내역</div>
+            </a>
+            <a class="p-2 grid grid-cols-8 gap-2 border mb-2 block" href="page-attendance.html">
+                <div class="col-span-2"><img class="mx-auto w-6" src="./assets/images/sidebar/11.png" alt=""></div>
+                <div class="col-span-6">출석하기</div>
+            </a>
+            <a class="p-2 grid grid-cols-8 gap-2 border mb-2 block" href="page-deposit.html">
+                <div class="col-span-2"><img class="mx-auto w-6" src="./assets/images/sidebar/12.png" alt=""></div>
+                <div class="col-span-6">입금</div>
+            </a>
+            <a class="p-2 grid grid-cols-8 gap-2 border mb-2 block" href="page-withdraw.html">
+                <div class="col-span-2"><img class="mx-auto w-6" src="./assets/images/sidebar/13.png" alt=""></div>
+                <div class="col-span-6">출금</div>
+            </a>
+            <a class="p-2 grid grid-cols-8 gap-2 border mb-2 block" href="page-betting-history.html">
+                <div class="col-span-2"><img class="mx-auto w-6" src="./assets/images/sidebar/14.png" alt=""></div>
+                <div class="col-span-6">배팅내역</div>
+            </a>
+            <a class="p-2 grid grid-cols-8 gap-2 border mb-2 block" href="page-result.html">
+                <div class="col-span-2"><img class="mx-auto w-6" src="./assets/images/sidebar/15.png" alt=""></div>
+                <div class="col-span-6">경기결과</div>
+            </a>
+            <a class="p-2 grid grid-cols-8 gap-2 border mb-2 block" href="page-free.html">
+                <div class="col-span-2"><img class="mx-auto w-6" src="./assets/images/sidebar/16.png" alt=""></div>
+                <div class="col-span-6">베팅규정</div>
+            </a>
+            <a class="p-2 grid grid-cols-8 gap-2 border mb-2 block" href="page-customer.html">
+                <div class="col-span-2"><img class="mx-auto w-6" src="./assets/images/sidebar/17.png" alt=""></div>
+                <div class="col-span-6">고객센터</div>
+            </a>
+        </div>
+    </div>
+    <!-- Sidebar Section -->
+
+    <div class="LOGIN_WRAPPER hidden">
+        <div class="w-full h-screen bg-black/80 fixed left-0 top-0 z-40 flex items-center justify-center">
+            <div class="form  bg-white rounded-lg relative"
+                style="width: 95%; max-width : 400px; height : 458px; background : url('./assets/images/form/bg-frm.png'); background-color : #fff">
+                <div class="relative flex items-center justify-center p-5 px-10 h-full">
+                    <img onclick="CloseLoginForm()"
+                        class="absolute right-5 top-5 border-2 rounded-full border-black cursor-pointer z-20"
+                        src="./assets/images/icons/close.svg" alt="">
+                    <div class="text-center">
+                        <img class="mb-2 mx-auto" src="./assets/images/brand/logo.png" alt="">
+                        <h2 class="text-xl font-bold">로그인</h2>
+                        <hr class="border my-2">
+                        <input class="border w-full mb-2 py-2 px-4 text-center bg-white rounded-lg" type="text"
+                            placeholder="아이디">
+                        <input autocomplete="new-password"
+                            class="border w-full mb-2 py-2 px-4 text-center bg-white rounded-lg" type="password"
+                            placeholder="아이디">
+
+                        <button class="button-1 w-full mb-2 bg-theme-3 login-button">로그인</button>
+                        <a href="page-register.html" class="block button-1 w-full bg-theme-4">회원가입</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Modal Overlay -->
+    <div class="overlay w-full h-screen bg-theme-2/50 left-0 top-0 fixed hidden"></div>
+    <!-- Modal Overlay -->
+
+</body>
+
+<script src="./assets/js/script.js"></script>
+
+</html>
